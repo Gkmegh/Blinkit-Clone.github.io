@@ -1,0 +1,486 @@
+@import url('variable.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    transition: all .3s ease-in-out;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+
+
+/* -------- header ------------ */
+
+/* .header{
+    border:2px solid;
+} */
+
+.header .navbar{
+    /* border: 2px solid black; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 8.6rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--color-grey2);
+    background-color: var(--color-white);
+    z-index: 1000;
+}
+
+.navbar .logo{
+    border-right: px solid var(--color-grey2);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo a{
+    padding: 2rem;
+    font-size: 0rem;
+    /* width: 17.8rem; */
+}
+
+/* location  */
+
+.navbar .location{
+    /* border:2px solid; */
+    margin:0px 10px;
+}
+
+.navbar .location .location-title{
+    font-size: 1.7rem;
+    font-weight: var(--fw-800);
+    color: #000;
+    margin-bottom: 0.6rem;
+}
+
+.navbar .location-desc{
+    font-weight: var(--fw-400);
+    font-size: 1.2rem;
+    color: #000;
+    overflow: hidden;
+}
+
+.navbar .location-desc .fa-sort-down{
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
+    transform: translateY(-1.2px);
+}
+
+
+
+/* searchbar  */
+
+.navbar .search-bar{
+    height: 4.6rem;
+    display: flex;
+    width: 47%;
+    align-items: center;
+    background: rgb(248, 248, 248);
+    color: rgb(130, 130, 130);
+    border-radius: 1rem;
+    border:2px solid rgb(240, 240, 240);
+    gap:0.8rem;
+}
+
+.navbar .search-bar input{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.5rem;
+}
+
+.navbar .search-bar .fa-magnifying-glass{
+    font-size: 2rem;
+    color: #000;
+    padding-left: 1.3rem;
+    font-weight: 200;
+
+}
+
+/* login  */
+
+.navbar .login{
+    font-size: 19px;
+    font-weight: 200;
+    color: rgb(54, 54, 54);
+    transition: font-size 0.5s ease 0s;
+}
+
+
+/* cart  */
+
+.navbar .cart{
+    /* border: 2px solid; */
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+    margin-left: 1rem;
+    background: var(--color-green);
+    border-radius: .8rem;
+    color: #fff;
+    font-size: 1.5rem;
+    gap:1rem;
+    padding: 1.4rem;
+    cursor: pointer;
+}
+
+.navbar .cart .fa-cart-shopping{
+    font-size: 2.3rem;
+}
+
+
+/* --------- main ------------ */
+
+/* utility */
+
+.container{
+    max-width: 1280px;
+    width:98%;
+    margin: 0 auto;
+}
+
+main .wrapper{
+    /* border:2px solid; */
+    position: relative;
+    top:8.2rem;
+}
+
+/* .wrapper .banner1{
+    border:2px solid;
+} */
+
+.banner1 img{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+/* ------- banner 2----------- */
+
+
+.banner2{
+    /* border:2px solid; */
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    overflow:auto;
+    flex: 1 1;
+}
+
+.banner2::-webkit-scrollbar{
+    display: none;
+}
+
+.banner2 img{
+    /* width: 100%; */
+    width: 33.5rem;
+    height:19.5rem ;
+}
+
+/* --------- categories -------- */
+
+.main .categories{
+    /* border:2px solid; */
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+
+}
+
+/* .categories .cate-img{
+    border:2px solid;
+} */
+
+.categories .cate-img img{
+    width: 100%;
+}
+
+/* ----- items --------- */
+
+.main .items{
+    /* border:2px solid; */
+    margin-top: 3rem;
+}
+
+.main .items .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.main .items .title .category-name{
+    color: rgb(28, 28, 28);
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.main .items .title a,
+footer .title a{
+    font-size: 2rem;
+    color: rgb(12, 131, 31);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.items .list-items{
+    /* border:2px solid red; */
+    display: flex;
+    gap: 1rem;
+    overflow: auto;
+}
+
+.items .list-items::-webkit-scrollbar{
+    display: none;
+}
+
+
+.main .list-items .item{
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgb(232, 232, 232);
+    box-shadow: rgba(0, 0, 0, 0.04) 2px 2px 8px;
+    border-radius: .8rem;
+
+    cursor: pointer;
+    flex: 0 1 0%;
+    min-width: 17.9rem;
+    max-width: 17.9rem;
+    padding: 1rem;
+}
+
+
+/* .list-items .item .item-img{
+    border:2px solid green;
+}  */
+
+.main .list-items .item .item-img img{
+    width: 100%;
+}
+
+/* .list-items .item .item-details{
+    border:2px solid green;
+} */
+
+
+.main .item .item-details .fa-timer{
+   margin-right: .3rem;
+}
+
+
+.main .item .item-details .timer{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    color: rgb(98, 98, 98);
+    margin-bottom: .6rem;
+    background-color: var(--color-grey2);
+    display: inline-block;
+}
+
+.main .item .item-details .item-name{
+    overflow: hidden;
+    color: rgb(31, 31, 31);
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.8rem;
+    width: 100%;
+    height: 3.1rem;
+    margin-bottom: .6rem;
+}
+
+.main.item .item-details .item-weight{
+    font-size: 1.3rem;
+    overflow: hidden;
+    color: var(--color-grey);
+    height: 2.5rem;
+}
+
+.main .item .item-details .item-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item .item-details .item-price .price{
+    color: rgb(31, 31, 31);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.item .item-details .item-price button{
+    cursor: pointer;
+    width: 6.6rem;
+    border: 1px solid rgb(49, 134, 22);
+    height: 3.1rem;
+    color: rgb(49, 134, 22);
+    font-weight: 600;
+    font-size: 1.3rem;
+    /* font-family: Okra; */
+    background-color: rgb(247, 255, 249);
+    border-radius: 0.375rem;
+    gap: 0.125rem;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+
+
+/* --------footer ----------- */
+
+.footer{
+    position: relative;
+    top:12rem;
+    padding: 1.5rem;
+    background-color: #efefefb8;
+    /* background: #efefef,linear-gradient(rgba(195,195,195,.1),rgba(195,195,195,.1)); */
+    
+}
+
+.footer li{
+    list-style-type: none;
+    color: #666;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.footer .title{
+    font-size: 1.8rem;
+    margin: 2.4rem 0;
+    font-weight: 600;
+}
+
+.footer .categories-seeAll a{
+    font-weight: 400;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+/* wrapper  */
+
+.foot-wrapper .upper{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap:5rem;
+}
+
+.foot-wrapper .upper .usefull-links,
+.foot-wrapper .upper .categories-seeAll{
+    /* border:2px solid; */
+    width: 100%;
+}
+
+.foot-wrapper .upper .links-container,
+.foot-wrapper .upper .categories-container{
+    display: flex;
+    justify-content: space-between;
+    /* width: 50%; */
+    gap:1rem;
+}
+
+.foot-wrapper .upper .categories-container{
+    padding-top: 2rem;
+}
+
+.foot-wrapper .upper .usefull-links{
+    width: 40%;
+}
+
+
+/* lower  */
+
+ .footer {
+    font-size: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    /* background-color: rgb(177, 175, 175); */
+    margin-top: 2.5rem;
+    /* color: rgb(95, 94, 94); */
+    font-weight: 600;
+    text-overflow: clip;
+}
+
+
+/* Styling for the footer */
+
+
+.footer-end {
+    position: relative;
+  }
+  
+  /* Styling for the lower section */
+  .lower {
+    display: flex;
+    align-items: center;
+  }
+  
+  .lower p {
+    margin-top: auto;
+  }
+  
+  /* Styling for the "Made by" section */
+  .lower div:first-child {
+    flex:  0.5;
+  }
+  
+  /* Styling for the "Download App" section */
+  .down p {
+    margin: 10px;
+  }
+  
+  /* Styling for the "Download App" images */
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    height: 10px;
+  }
+  
+  #foot-logo p {
+    margin-right: 10px;
+  }
+  
+  .Downloadapp {
+    width: 120px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  /* Styling for the social media logos */
+  .social-media-logo {
+    text-align: right;
+    /* margin-top: 20px; */
+    position: absolute; /* Add position absolute */
+  bottom: 5; /* Position at the bottom */
+  right: 0;
+  }
+  
+  .fa-brands {
+    /* margin: 5px; */
+    /* color: #555; */
+    margin-right: 0;
+  }
+  
+  .fa-2x {
+    /* font-size: 2em; */
+    margin-right: 0;
+  }
+  
